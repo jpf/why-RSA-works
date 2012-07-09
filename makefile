@@ -6,40 +6,40 @@
 MISC= 	README \
 	makefile \
 
-TEXS=   block-diagram.tex \
-	conclusions.tex \
-	exponent-arithmetic.tex \
-	exponential-notation.tex \
-	exponential-tables.tex \
-	factor-ops.tex \
-	hard-problems.tex \
-	huge-integers.tex \
-	intro.tex \
-	main.tex \
-	mappings.tex \
-	modex-15.tex \
-	modex-33-arrows.tex \
-	modex-33-cols.tex \
-	modex-33.tex \
-	modex-function.tex \
-	mult-plus-one.tex \
-	multiple-plus-one.tex \
-	oplus-15.tex \
-	oplus-operator.tex \
-	otimes-15.tex \
-	otimes-operator.tex \
-	references.tex \
-	rings.tex \
-	set-Zn.tex \
-	simple-proof.tex \
-	simulation.tex \
-	wallpaper.tex \
+TEXS=   tex/block-diagram.tex \
+	tex/conclusions.tex \
+	tex/exponent-arithmetic.tex \
+	tex/exponential-notation.tex \
+	tex/exponential-tables.tex \
+	tex/factor-ops.tex \
+	tex/hard-problems.tex \
+	tex/huge-integers.tex \
+	tex/intro.tex \
+	tex/main.tex \
+	tex/mappings.tex \
+	tex/modex-15.tex \
+	tex/modex-33-arrows.tex \
+	tex/modex-33-cols.tex \
+	tex/modex-33.tex \
+	tex/modex-function.tex \
+	tex/mult-plus-one.tex \
+	tex/multiple-plus-one.tex \
+	tex/oplus-15.tex \
+	tex/oplus-operator.tex \
+	tex/otimes-15.tex \
+	tex/otimes-operator.tex \
+	tex/references.tex \
+	tex/rings.tex \
+	tex/set-Zn.tex \
+	tex/simple-proof.tex \
+	tex/simulation.tex \
+	tex/wallpaper.tex \
 
 
 why-RSA-works.pdf:	${TEXS}$
-			pdflatex main.tex
-			pdflatex main.tex
-			mv main.pdf why-RSA-works.pdf
+			cd tex/; pdflatex main.tex
+			cd tex/; pdflatex main.tex
+			cd tex/; mv main.pdf ../why-RSA-works.pdf
 
 why-RSA-works.tar:	${TEXS}$ ${MISC}$
 			tar -cvf why-RSA-works.tar ${MISC}$ ${TEXS}$ why-RSA-works.pdf
