@@ -1,11 +1,12 @@
 # why-RSA-works/README
 # Copyright 2012 Peter Franusic.
 # All rights reserved.
-#
 
 This directory contains LaTeX source files for an article titled "Why RSA Works".
 The article describes the math behind the RSA algorithm.
-The makefile script assumes that the pdflatex program is installed.
+The makefile script assumes that the 'pdflatex' program is installed.
+
+On Mac OS X, the 'mactex-basic' package appears to be the simplest way to install 'pdflatex' It is available here: http://www.tug.org/mactex/2012/morepackages.html
 
 To generate a PDF of the article:
 
